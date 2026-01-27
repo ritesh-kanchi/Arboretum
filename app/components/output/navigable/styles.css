@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+.tree li[tabindex="0"] > .arbornode,
+.tree .arbornode[tabindex="0"] {
+  @apply ring-1 ring-green-500;
+}
