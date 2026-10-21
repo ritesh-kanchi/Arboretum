@@ -78,6 +78,7 @@ function TreeRenderer({ diagram }: { diagram: IRTree }) {
         <table className="min-w-full">
           <thead>
             <tr>
+              <th>ID</th>
               <th>Value</th>
               <th>Parent</th>
               {diagram.meta.type === "bt" ? (
@@ -111,6 +112,15 @@ function TreeRenderer({ diagram }: { diagram: IRTree }) {
 
               return (
                 <tr key={node.id} id={node.id}>
+                  <Ltd
+                    id={`tree-id-${i}`}
+                    data={{
+                      col: "id",
+                      value: node.id,
+                    }}
+                  >
+                    {node.id}
+                  </Ltd>
                   <Ltd
                     id={`tree-value-${i}`}
                     data={{
